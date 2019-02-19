@@ -3,7 +3,9 @@
 #include <cmath>
 #include "Equation.h"
 
-using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
 
 const int PARTS = 10;
 
