@@ -7,9 +7,10 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-const int PARTS = 10;
+const int PARTS = 10; //determines the amount of partitions for the approximation
 
 int main(){
+	//initializes variables
 	Equation eq = Equation();
   double a = 0.0;
   double b = 0.0;
@@ -25,10 +26,12 @@ int main(){
   cin >> b;
   cout << endl;
 
-  if(b==a){
+  if(b==a){ //the integral is zero
     cout << "Invalid Input: a = b" <<endl;
     return 0;
-  }else if(b<a){
+  }else if(b<a){ //the algorithm doesn't work if a>b
+								 //but the inetgral of f(x)dx from b to a = the negative inetgral of f(x)dx from a to b
+								 //so if we multiple the answer by -1 and switch a and b, we will find the answer
     multiplier = -1;
     double temp = a;
     a = b;
